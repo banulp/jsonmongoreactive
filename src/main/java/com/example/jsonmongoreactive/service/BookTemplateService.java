@@ -10,10 +10,12 @@ public class BookTemplateService {
     @Autowired
     private ReactiveMongoTemplate reactiveMongoTemplate;
 
-    public void doSomething(){
+    public void doSomething() {
 
+//        reactiveMongoTemplate.insert(new Person("banulp", "kyungok",42), "person");
+//        System.out.println(reactiveMongoTemplate.findAll(Person.class).collectList().block().size());
 
-//        reactiveMongoTemplate.insert()
+//        reactiveMongoTemplate.insert("templete persion", "person");
 
 
     }

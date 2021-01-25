@@ -1,5 +1,6 @@
 package com.example.jsonmongoreactive;
 
+import com.example.jsonmongoreactive.service.BookOperationService;
 import com.example.jsonmongoreactive.service.BookTemplateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationRunner;
@@ -14,6 +15,9 @@ public class JsonmongoreactiveApplication {
     @Autowired
     private BookTemplateService bookService;
 
+    @Autowired
+    private BookOperationService bookOperationService;
+
     public static void main(String[] args) {
         SpringApplication.run(JsonmongoreactiveApplication.class, args);
     }
@@ -26,7 +30,8 @@ public class JsonmongoreactiveApplication {
     @Bean
     public ApplicationRunner applicationRunner() {
         return args -> {
-            bookService.doSomething();
+//            bookService.doSomething();
+            bookOperationService.doSomething();
         };
     }
 }
